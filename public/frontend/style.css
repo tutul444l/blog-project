@@ -1,0 +1,154 @@
+/* #search{
+    background-color: red;
+} */
+
+
+#nav-search{
+    padding-left: 18px;
+    border-radius: 35px;
+    width: 100%;
+
+}
+input{
+    border: 1px solid gray;
+    /* border: none; */
+}
+#link{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+
+}
+input:focus {
+    border: none !important;
+  }
+.main-searchbar{
+    border: 1px solid gray;
+    border-radius: 35px;
+}
+button.navbar-toggler {
+    border: none;
+}
+
+input:focus{
+    border: 1px solid red;
+}
+.offcanvas{
+    width: 250px;
+}
+.col-md-8 h4{
+    font-size: 39px;;
+}
+/* .user-img{
+    height: 100px;
+    width: 100px;
+} */
+
+#profile-img{
+    height: 50px;
+    border-radius: 50%;
+}
+.user-info h5{
+    font-size: 20px;
+    margin: 0;
+}
+
+.user-info p{
+    font-size: 16px;
+    margin: 0;
+}
+.image1{
+    background-image: url(img/1.jpg);
+    background-size: cover;
+}
+.image2{
+    background-image: url(img/2.jpg);
+    background-size: cover;
+}
+
+.image3{
+    background-image: url(img/4.jpg);
+    background-size: cover;
+}
+
+
+h6{
+    font-size: 10px;
+}
+
+
+.main-slider-image.image1.border.danger.w-100.h-100 {
+    padding: 100px;
+  }
+.main-slider-image.image2.border.danger.w-100.h-100 {
+    padding: 100px;
+  }
+.main-slider-image.image3.border.danger.w-100.h-100 {
+    padding: 100px;
+  }
+  #subscriber-search{
+    width: 100%;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding: 7px;
+
+
+  }
+  .subscribe-btn{
+    padding: 10px;
+    background-color: orange !important;
+  }
+
+ .subscriber-bg-color{
+    background-color: #F8F9FA;
+ }
+
+ #item-image{
+    height: 130px;
+    width: 230px;
+ }
+ #sport-content h5 {
+    font-size: 8px;
+ }
+ #sport-content p {
+    font-size: 8px;
+ }
+
+ #profile-img-sport{
+    height: 30px;
+    border-radius: 50%;
+ }
+.item-content h6{
+    font-size: 13px;
+}
+/* .tns-controls {
+    display: none;
+} */
+
+
+.tns-nav button {
+    width: 10px;
+    background: rgb(90, 95, 90);
+
+    height: 12px;
+    margin-right: 3px;
+    border-radius: 100%;
+    border: none;
+  }
+  button.tns-nav-active {
+    background: tomato;
+  }
+  .tns-nav {
+    text-align: center;
+    position: relative;
+    z-index: 3;
+
+
+
+
+
+}
