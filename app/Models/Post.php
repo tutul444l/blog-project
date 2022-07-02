@@ -18,9 +18,15 @@ class Post extends Model
         'image',
         'category_id',
         'category_name',
+        'created_by',
         'sub_category_id',
         'subcategory_name',
         'author_id',
     ];
     protected $dates = ['date'];
+
+    public function user(){
+        return $this->hasOne(User::class,'id','created_by');
+    }
+  
 }

@@ -15,6 +15,7 @@
             <th scope="col">Title</th>
             <th scope="col">Category</th>
             <th scope="col">Subcategory</th>
+            <th scope="col">Created BY</th>
             <th scope="col">Image</th>
             <th scope="col">Date</th>
             <th scope="col">Action    </th>
@@ -30,6 +31,12 @@
             <td>{{$post->title}}</td>
             <td>{{$post->category_name}}</td>
             <td>{{$post->subcategory_name}}</td>
+            <td>
+                @if($post->user->name == NULL)
+                <span>not set</span>
+                @else
+                {{$post->user->name}}</td>
+                @endif
             {{-- <td>{{$post->category_id}}</td> --}}
             {{-- <td>{{$post->sub_category_id}}</td> --}}
 

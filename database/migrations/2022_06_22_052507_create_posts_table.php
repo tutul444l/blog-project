@@ -22,6 +22,7 @@ class CreatePostsTable extends Migration
             $table->unsignedBigInteger('category_id')->nullable();
             $table->string('category_name')->nullable();
             $table->string('subcategory_name')->nullable();
+            $table->string('created_by')->nullable();
             $table->unsignedBigInteger('sub_category_id')->nullable();
             $table->date('date');
             $table->string('image')->nullable();

@@ -6,9 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Subcategory;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Image;
+use Illuminate\Support\Facades\Auth;
+
 
 class PostController extends Controller
 {
@@ -24,6 +27,7 @@ class PostController extends Controller
      */
     public function index()
     {
+
 
         $allpost=Post::all();
         return view('backend.post.index',compact('allpost'));
@@ -82,8 +86,9 @@ class PostController extends Controller
                 'description'      => $request->description,
                 'meta_description' => $request->meta_description,
                 'category_id'      => $request->category_id,
-                'category_name'      => $request->category_name,
-                'subcategory_name'      => $request->subcategory_name,
+                'category_name'    => $request->category_name,
+                'subcategory_name' => $request->subcategory_name,
+                'created_by'       => Auth::user()->id,
                 'sub_category_id'  => $request->sub_category_id,
                 'date'             => $request->date,
                 'image'            => $imageName,
@@ -98,8 +103,9 @@ class PostController extends Controller
                 'description'      => $request->description,
                 'meta_description' => $request->meta_description,
                 'category_id'      => $request->category_id,
-                'category_name'      => $request->category_name,
-                'subcategory_name'      => $request->subcategory_name,
+                'category_name'    => $request->category_name,
+                'subcategory_name' => $request->subcategory_name,
+                'created_by'       => Auth::user()->id,
                 'sub_category_id'  => $request->sub_category_id,
                 'date'             => $request->date,
 
@@ -230,6 +236,5 @@ class PostController extends Controller
     public function subcategory(){
         return $this->hasOne(Subcategory::class,'name','subcategory_name');
     }
-
 
 }

@@ -6,16 +6,20 @@
               <img src="{{asset('storage/post/'.$post->image)}}" class="card-img-top " alt="...">
               <div class="card-body">
 
-              <h6>Business, Travel <span style="color:gray"> — July 2, 2020</span></h6>
+              <h6>{{$post->category_name}} <span style="color:gray"> — July 2, 2020</span></h6>
                       <h4>{{$post->category_name}}</h4>
                       <h2 class="fs-5 fw-bold">{{$post->description}}</h2>
                       <p>{{$post->meta_description}}</p>
                       <div class="user-profile d-flex">
                         <div class="user-img">
-                         <img src="{{asset('frontend/img/CEO.jpg')}}"  id="profile-img" alt="">
+                         <img src="{{asset('storage/userprofile/'.$post->user->img)}}"  id="profile-img" alt="">
+                         {{-- <img src="{{asset('storage/userprofile/'.$post->userImg->img)}}"  id="profile-img" alt=""> --}}
                         </div>
                         <div class="user-info ms-3">
-                          <h5>Sergy Campbell</h5>
+
+                          {{-- <h5>{{Auth::user()->name}}</h5> --}}
+                          <h5>{{$post->user->name}}</h5>
+
                           <p style="color: gray;">CEO and Founder</p>
                         </div>
                       </div>
